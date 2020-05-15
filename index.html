@@ -101,7 +101,51 @@ response = client.start_transcription_job(
 		
 		
 		</section>
-				<section>Slide 10</section>
+				<section>
+		
+					Amazon Translate using boto3 sdk
+					
+					
+					import boto3
+
+client = boto3.client('translate')
+		
+		response = client.start_text_translation_job(
+    JobName='string',
+    InputDataConfig={
+        'S3Uri': 'string',
+        'ContentType': 'string'
+    },
+    OutputDataConfig={
+        'S3Uri': 'string'
+    },
+    DataAccessRoleArn='string',
+    SourceLanguageCode='string',
+    TargetLanguageCodes=[
+        'string',
+    ],
+    TerminologyNames=[
+        'string',
+    ],
+    ClientToken='string'
+)
+		
+		
+		
+		
+		
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				<section>Slide 11</section>
 			</div>
 		</div>
 
