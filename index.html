@@ -58,20 +58,40 @@
 				</section>
 				<section>
 					<pre><code class="hljs" data-line-numbers="4,8-11">
-import React, { useState } from 'react';
- 
-function Example() {
-  const [count, setCount] = useState(0);
- 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
+import boto3
+
+client = boto3.client('transcribe')
+
+response = client.start_transcription_job(
+    TranscriptionJobName='string',
+    LanguageCode='en-US'|'es-US'|'en-AU'|'fr-CA'|'en-GB'|'de-DE'|'pt-BR'|'fr-FR'|'it-IT'|'ko-KR'|'es-ES'|'en-IN'|'hi-IN'|'ar-SA'|'ru-RU'|'zh-CN'|'nl-NL'|'id-ID'|'ta-IN'|'fa-IR'|'en-IE'|'en-AB'|'en-WL'|'pt-PT'|'te-IN'|'tr-TR'|'de-CH'|'he-IL'|'ms-MY'|'ja-JP'|'ar-AE',
+    MediaSampleRateHertz=123,
+    MediaFormat='mp3'|'mp4'|'wav'|'flac',
+    Media={
+        'MediaFileUri': 'string'
+    },
+    OutputBucketName='string',
+    OutputEncryptionKMSKeyId='string',
+    Settings={
+        'VocabularyName': 'string',
+        'ShowSpeakerLabels': True|False,
+        'MaxSpeakerLabels': 123,
+        'ChannelIdentification': True|False,
+        'ShowAlternatives': True|False,
+        'MaxAlternatives': 123,
+        'VocabularyFilterName': 'string',
+        'VocabularyFilterMethod': 'remove'|'mask'
+    },
+    JobExecutionSettings={
+        'AllowDeferredExecution': True|False,
+        'DataAccessRoleArn': 'string'
+    },
+    ContentRedaction={
+        'RedactionType': 'PII',
+        'RedactionOutput': 'redacted'|'redacted_and_unredacted'
+    }
+)
+
 </code></pre>
 		
 		
