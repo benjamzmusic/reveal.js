@@ -146,7 +146,39 @@ client = boto3.client('translate')
 		
 		
 		
-				<section>Slide 11</section>
+				<section>
+				
+				<pre><code class="hljs" data-line-numbers="4,8-11">
+				
+				import boto3
+
+client = boto3.client('polly')
+
+response = client.start_speech_synthesis_task(
+    Engine='standard'|'neural',
+    LanguageCode='arb'|'cmn-CN'|'cy-GB'|'da-DK'|'de-DE'|'en-AU'|'en-GB'|'en-GB-WLS'|'en-IN'|'en-US'|'es-ES'|'es-MX'|'es-US'|'fr-CA'|'fr-FR'|'is-IS'|'it-IT'|'ja-JP'|'hi-IN'|'ko-KR'|'nb-NO'|'nl-NL'|'pl-PL'|'pt-BR'|'pt-PT'|'ro-RO'|'ru-RU'|'sv-SE'|'tr-TR',
+    LexiconNames=[
+        'string',
+    ],
+    OutputFormat='json'|'mp3'|'ogg_vorbis'|'pcm',
+    OutputS3BucketName='string',
+    OutputS3KeyPrefix='string',
+    SampleRate='string',
+    SnsTopicArn='string',
+    SpeechMarkTypes=[
+        'sentence'|'ssml'|'viseme'|'word',
+    ],
+    Text='string',
+    TextType='ssml'|'text',
+    VoiceId='Aditi'|'Amy'|'Astrid'|'Bianca'|'Brian'|'Camila'|'Carla'|'Carmen'|'Celine'|'Chantal'|'Conchita'|'Cristiano'|'Dora'|'Emma'|'Enrique'|'Ewa'|'Filiz'|'Geraint'|'Giorgio'|'Gwyneth'|'Hans'|'Ines'|'Ivy'|'Jacek'|'Jan'|'Joanna'|'Joey'|'Justin'|'Karl'|'Kendra'|'Kimberly'|'Lea'|'Liv'|'Lotte'|'Lucia'|'Lupe'|'Mads'|'Maja'|'Marlene'|'Mathieu'|'Matthew'|'Maxim'|'Mia'|'Miguel'|'Mizuki'|'Naja'|'Nicole'|'Penelope'|'Raveena'|'Ricardo'|'Ruben'|'Russell'|'Salli'|'Seoyeon'|'Takumi'|'Tatyana'|'Vicki'|'Vitoria'|'Zeina'|'Zhiyu'
+)
+				
+				
+				
+				
+				
+				
+				</section>
 			</div>
 		</div>
 
